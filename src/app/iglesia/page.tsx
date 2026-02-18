@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Iglesia() {
   return (
     <>
-      <PageHeader title="✦ Iglesia de la Filosofía del Espíritu" description="IFE — Un espacio de reflexión, estudio y crecimiento espiritual basado en la filosofía del espíritu." />
+      <PageHeader title="✦ Iglesia de la Filosofía del Espíritu" subtitle="IFE — Un espacio de reflexión, estudio y crecimiento espiritual basado en la filosofía del espíritu." />
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex justify-center mb-8">

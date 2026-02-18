@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Retiros() {
   return (
     <>
-      <PageHeader title="🏔️ Retiros Espirituales" description="Retiros y vacaciones para el crecimiento interior, la formación y la salud integral." />
+      <PageHeader title="🏔️ Retiros Espirituales" subtitle="Retiros y vacaciones para el crecimiento interior, la formación y la salud integral." />
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4">
           <div className="mb-8">

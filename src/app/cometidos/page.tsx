@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Cometidos() {
   return (
     <>
-      <PageHeader title="🎯 Cometidos y Finalidades" description="Misión, visión y propósitos del proyecto Salud Naturista DECOYÍN." />
+      <PageHeader title="🎯 Cometidos y Finalidades" subtitle="Misión, visión y propósitos del proyecto Salud Naturista DECOYÍN." />
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex justify-center mb-8">

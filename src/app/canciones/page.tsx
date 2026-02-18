@@ -18,7 +18,7 @@ export default function Canciones() {
     <>
       <PageHeader
         title="🎵 Canciones"
-        description="Más de 963 canciones Filo-Psico-Sóficas Terapéuticas subidas a Internet, subvencionadas por nuestra ONG."
+        subtitle="Más de 963 canciones Filo-Psico-Sóficas Terapéuticas subidas a Internet, subvencionadas por nuestra ONG."
       />
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-4">

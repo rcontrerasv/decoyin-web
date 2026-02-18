@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Universidad() {
   return (
     <>
-      <PageHeader title="🎓 Universidad" description="UPFED, PhD y PsicoAlquimia — Formación espiritual y terapéutica avanzada." />
+      <PageHeader title="🎓 Universidad" subtitle="UPFED, PhD y PsicoAlquimia — Formación espiritual y terapéutica avanzada." />
       <section className="py-12">
         <div className="max-w-5xl mx-auto px-4">
           {/* Logos institucionales */}
