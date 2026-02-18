@@ -1,61 +1,84 @@
 import PageHeader from "@/components/PageHeader";
+import Image from "next/image";
+
+const videos = [
+  { id: "CSHnDkT9bxc", title: "Canción Terapéutica" },
+  { id: "FVtDb4c-EFw", title: "Canción para tu evolución" },
+  { id: "afPdr6JMqtY", title: "Video-Canción DECOYÍN" },
+  { id: "AhuKd2B2vrc", title: "Canción espiritual" },
+  { id: "wBrQDgIMZug", title: "Música para el alma" },
+  { id: "UjGaQq0gX6g", title: "Canción formativa" },
+  { id: "1sMDSkW1lvc", title: "Canción de sanación" },
+  { id: "vDwQar7K9O4", title: "Melodía terapéutica" },
+  { id: "dEfTpeinR6E", title: "Canción de despertar" },
+];
 
 export default function Canciones() {
   return (
     <>
-      <PageHeader title="Canciones" subtitle="Más de 963 canciones Filo-Psico-Sóficas Terapéuticas para tu evolución" />
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <div className="bg-spirit-50 rounded-xl p-8 mb-10 border-l-4 border-gold-500">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Las canciones de Salud Naturista DECOYÍN son composiciones Filo-Psico-Sóficas Terapéuticas creadas para tu evolución personal y espiritual. Con más de 963 canciones subidas a Internet y más de 1.000 vídeos, constituyen una herramienta única de formación y crecimiento interior.
-          </p>
-        </div>
+      <PageHeader
+        title="🎵 Canciones"
+        description="Más de 963 canciones Filo-Psico-Sóficas Terapéuticas subidas a Internet, subvencionadas por nuestra ONG."
+      />
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Portada principal */}
+          <div className="flex flex-col md:flex-row gap-8 items-center mb-12">
+            <div className="md:w-1/2">
+              <Image src="/images/cancion-terapeutica.jpg" alt="Canción Terapéutica para tu evolución" width={600} height={340} className="rounded-xl shadow-lg" />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-2xl font-bold text-primary-900 mb-4">Tu Canción Filo-Psico-Sófica Terapéutica para tu Evolución</h2>
+              <p className="text-gray-600 mb-4">
+                Un proyecto formativo con canciones, subvencionado por nuestra ONG. Más de 1.000 vídeos subidos a Internet con 963 canciones para tu formación, crecimiento interior y salud.
+              </p>
+              <Image src="/images/album.jpg" alt="Álbum DECOYÍN" width={300} height={170} className="rounded-lg shadow-md" />
+            </div>
+          </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 mb-12">
-          <div className="bg-primary-800 text-white rounded-xl p-6 text-center">
-            <span className="text-3xl font-bold block gradient-gold">963+</span>
-            <span className="text-sm text-blue-200">Canciones</span>
+          {/* Canal de YouTube */}
+          <div className="text-center mb-8">
+            <a href="https://youtube.com/@PsicoAlquimia" target="_blank" rel="noopener noreferrer" className="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+              ▶️ Canal YouTube @PsicoAlquimia
+            </a>
+            <span className="mx-4 text-gray-400">·</span>
+            <a href="https://www.youtube.com/playlist?list=UUgSDLJG0QrrIHxzSUXH9rIA" target="_blank" rel="noopener noreferrer" className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+              📋 Playlist Completa
+            </a>
           </div>
-          <div className="bg-primary-800 text-white rounded-xl p-6 text-center">
-            <span className="text-3xl font-bold block gradient-gold">1.000+</span>
-            <span className="text-sm text-blue-200">Vídeos</span>
-          </div>
-          <div className="bg-primary-800 text-white rounded-xl p-6 text-center">
-            <span className="text-3xl font-bold block gradient-gold">ONG</span>
-            <span className="text-sm text-blue-200">Sin ánimo de lucro</span>
-          </div>
-        </div>
 
-        {/* Video placeholder */}
-        <h2 className="text-2xl font-bold text-primary-800 mb-6">Video-Canciones</h2>
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {[1, 2, 3, 4].map((n) => (
-            <div key={n} className="bg-gray-100 rounded-xl overflow-hidden">
-              <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                  <span className="text-4xl block mb-2">▶️</span>
-                  <p className="text-sm">Vídeo-canción {n}</p>
-                  <p className="text-xs mt-1">Embed de YouTube / Facebook</p>
+          {/* Grid de videos */}
+          <h3 className="text-2xl font-bold text-primary-900 mb-6 text-center">Video-Canciones Destacadas</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {videos.map((v) => (
+              <div key={v.id} className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
+                <div className="aspect-video">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${v.id}`}
+                    title={v.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="p-3">
+                  <p className="text-sm font-medium text-gray-700">{v.title}</p>
                 </div>
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-primary-800">Canción Filo-Psico-Sófica Terapéutica #{n}</h3>
-                <p className="text-sm text-gray-500">Composición para tu evolución espiritual</p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="bg-gold-50 rounded-xl p-8 text-center border border-gold-200">
-          <h3 className="text-xl font-bold text-primary-800 mb-3">Tu canción Filo-Psico-Sófica Terapéutica para tu evolución</h3>
-          <p className="text-gray-600 mb-4">Descubre todo el catálogo de canciones terapéuticas en nuestros canales de vídeo.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">▶️ YouTube</a>
-            <a href="#" className="inline-block bg-primary-700 hover:bg-primary-800 text-white px-6 py-2 rounded-lg font-semibold transition-colors">🎥 Odysee</a>
+          {/* Facebook */}
+          <div className="mt-12 text-center">
+            <Image src="/images/facebook-canciones.jpg" alt="Facebook Salud Naturista" width={317} height={132} className="mx-auto rounded-lg shadow-md mb-4" />
+            <a href="https://www.facebook.com/saludnaturista" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline font-medium">
+              📘 Visita nuestra página de Facebook
+            </a>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -1,48 +1,76 @@
 import PageHeader from "@/components/PageHeader";
+import Image from "next/image";
 
 export default function Universidad() {
   return (
     <>
-      <PageHeader title="Universidad — UPFED" subtitle="Formación universitaria, PhD y PsicoAlquimia" />
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <div className="bg-spirit-50 rounded-xl p-8 mb-10 border-l-4 border-gold-500">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            La UPFED (Universidad del Proyecto de Filosofía del Espíritu DECOYÍN) ofrece programas de formación avanzada en el ámbito espiritual, filosófico y terapéutico.
-          </p>
-        </div>
+      <PageHeader title="🎓 Universidad" description="UPFED, PhD y PsicoAlquimia — Formación espiritual y terapéutica avanzada." />
+      <section className="py-12">
+        <div className="max-w-5xl mx-auto px-4">
+          {/* Logos institucionales */}
+          <div className="flex justify-center items-center gap-8 flex-wrap mb-12">
+            <div className="text-center">
+              <Image src="/images/logo-upfed.gif" alt="UPFED" width={187} height={198} />
+              <p className="text-sm font-semibold text-primary-800 mt-2">UPFED</p>
+            </div>
+            <div className="text-center">
+              <Image src="/images/escudo-phd.png" alt="PhD" width={185} height={174} />
+              <p className="text-sm font-semibold text-primary-800 mt-2">PhD</p>
+            </div>
+            <div className="text-center">
+              <Image src="/images/escudo-psicoalquimia.png" alt="PsicoAlquimia" width={162} height={151} />
+              <p className="text-sm font-semibold text-primary-800 mt-2">PsicoAlquimia</p>
+            </div>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
-            <div className="w-20 h-20 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <span className="text-3xl">🎓</span>
-            </div>
-            <h3 className="text-lg font-bold text-primary-800 mb-2">UPFED</h3>
-            <p className="text-sm text-gray-600">Universidad del proyecto. Programas formativos en filosofía del espíritu y salud naturista.</p>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
-            <div className="w-20 h-20 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <span className="text-3xl">📜</span>
-            </div>
-            <h3 className="text-lg font-bold text-primary-800 mb-2">PhD</h3>
-            <p className="text-sm text-gray-600">Programas de doctorado y estudios avanzados en el marco de la filosofía del espíritu.</p>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
-            <div className="w-20 h-20 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <span className="text-3xl">🔮</span>
-            </div>
-            <h3 className="text-lg font-bold text-primary-800 mb-2">PsicoAlquimia</h3>
-            <p className="text-sm text-gray-600">Formación en PsicoAlquimia: la integración de psicología y tradición alquímica espiritual.</p>
-          </div>
-        </div>
+          <div className="prose prose-lg max-w-none">
+            <p className="text-gray-700 mb-4">
+              La formación universitaria del proyecto DECOYÍN abarca diversas disciplinas del conocimiento espiritual 
+              y terapéutico, con programas de estudio rigurosos y profundos.
+            </p>
 
-        <div className="bg-primary-800 text-white rounded-xl p-8 text-center">
-          <h3 className="text-xl font-bold mb-3">Solicita información sobre nuestros programas</h3>
-          <p className="text-blue-200 mb-4">Escríbenos para conocer los requisitos y calendarios de formación.</p>
-          <a href="mailto:Info@saludnaturista.es" className="inline-block bg-gold-500 hover:bg-gold-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-            Contactar
-          </a>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="text-lg font-bold text-primary-800 mb-2">UPFED</h3>
+                <p className="text-gray-600 text-sm">Universidad del proyecto. Programas de formación integral y estudios avanzados en salud naturista y espiritualidad.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="text-lg font-bold text-primary-800 mb-2">PhD</h3>
+                <p className="text-gray-600 text-sm">Programa de doctorado. Investigación profunda en las áreas de conocimiento espiritual y terapéutico.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="text-lg font-bold text-primary-800 mb-2">PsicoAlquimia</h3>
+                <p className="text-gray-600 text-sm">Disciplina que integra la psicología profunda con la alquimia espiritual para la transformación interior.</p>
+              </div>
+            </div>
+
+            {/* Video de PsicoAlquimia */}
+            <h3 className="text-2xl font-bold text-primary-900 mb-4 text-center">Canal PsicoAlquimia</h3>
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/6jp_vkQqxSc"
+                title="PsicoAlquimia"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <p className="text-center mb-8">
+              <a href="https://youtube.com/@PsicoAlquimia" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">
+                ▶️ Ver más en YouTube @PsicoAlquimia
+              </a>
+            </p>
+
+            <div className="text-center">
+              <a href="mailto:Info@saludnaturista.es" className="inline-block bg-gold-500 hover:bg-gold-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                ✉️ Solicitar información sobre programas
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
