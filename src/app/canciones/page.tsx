@@ -70,12 +70,29 @@ export default function Canciones() {
             ))}
           </div>
 
-          {/* Facebook */}
-          <div className="mt-12 text-center">
-            <Image src="/images/facebook-canciones.jpg" alt="Facebook Salud Naturista" width={317} height={132} className="mx-auto rounded-lg shadow-md mb-4" />
-            <a href="https://www.facebook.com/saludnaturista" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline font-medium">
-              📘 Visita nuestra página de Facebook
-            </a>
+          {/* Facebook embed */}
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-primary-900 mb-6 text-center">Síguenos en Facebook</h3>
+            <div className="flex flex-col md:flex-row items-center gap-8 justify-center">
+              <div>
+                <Image src="/images/facebook-canciones.jpg" alt="Facebook Salud Naturista" width={317} height={132} className="rounded-lg shadow-md" />
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsaludnaturista&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                  width="340"
+                  height="500"
+                  style={{ border: "none", overflow: "hidden" }}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+            <p className="text-center mt-4">
+              <a href="https://www.facebook.com/saludnaturista" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline font-medium">
+                📘 facebook.com/saludnaturista
+              </a>
+            </p>
           </div>
         </div>
       </section>

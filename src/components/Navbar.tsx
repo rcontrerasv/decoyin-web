@@ -14,6 +14,7 @@ const links = [
   { href: "/radio", label: "Radio" },
   { href: "/iglesia", label: "IFE" },
   { href: "/canciones", label: "Canciones" },
+  { href: "/adhesion", label: "Adhesión" },
   { href: "/contacto", label: "Contactos" },
 ];
 
